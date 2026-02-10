@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+
+
+.container {
+    text-align: center;
+}
+
+.title {
+    color: #0f0e0e;
+    margin-bottom: 30px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #fff; }
+    to { text-shadow: 0 0 20px #ffccbc; }
+}
+
+/* Cake */
+.cake {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+.cake-body {
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    height: 120px;
+    background: #6d4c41;
+    border-radius: 0 0 20px 20px;
+}
+
+.cake-top {
+    position: absolute;
+    bottom: 110px;
+    width: 200px;
+    height: 30px;
+    background: #8d6e63;
+    border-radius: 20px 20px 0 0;
+}
+
+/* Teddy animation */
+.teddy {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    animation: teddyUp 3s infinite;
+}
+
+
+@keyframes teddyUp {
+    0%   { bottom: 20px; opacity: 0; }
+    50%  { bottom: 130px; opacity: 1; }
+    100% { bottom: 20px; opacity: 0; }
+}
